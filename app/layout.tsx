@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import clsx from "clsx";
+import { Header } from "./src/features/layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         {/* {children} */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-full">
+            <Header />
             <div className="flex-1 max-w-lg m-auto py-12 w-full">{children}</div>
           </div>
         </ThemeProvider>
