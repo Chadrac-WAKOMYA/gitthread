@@ -25,12 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
         className={clsx`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* {children} */}
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="flex flex-col h-full">
+            <div className="flex-1 max-w-lg m-auto py-12 w-full">{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
