@@ -31,8 +31,6 @@ export const Footer = () => {
         )}>
             <User size={16} />
         </Link>
-        
-
     </div>
   )
 }
