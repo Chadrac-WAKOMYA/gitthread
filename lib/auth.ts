@@ -9,7 +9,7 @@ export const authOptions = {
       clientId: env.GITHUB_ID,
       clientSecret: env.GITHUB_SECRET,
     }),
-    // ...add more providers here to make strong the code
+    // ...add more providers here 
   ],
 }
 
